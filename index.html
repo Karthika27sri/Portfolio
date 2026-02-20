@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karthika S – Power BI Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --chip: #1f2937;
+      --btn: #22c55e;
+      --btn2: #38bdf8
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 0;
+      letter-spacing: .3px
+    }
+
+    .subtitle {
+      color: var(--muted)
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: var(--text);
+      font-size: 14px
+    }
+
+    .chip {
+      background: var(--chip);
+      color: var(--text);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 6px
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--btn);
+      color: #052e16;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid #16a34a
+    }
+
+    .btn.secondary {
+      background: var(--btn2);
+      color: #06233a;
+      border-color: #0ea5e9
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 18px 18px;
+      margin: 14px 0
+    }
+
+    h2 {
+      font-size: 18px;
+      margin: 0 0 10px 0;
+      color: #cbd5e1
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 10px 0 6px 0;
+      color: #e2e8f0
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 6px 0
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px
+    }
+
+    @media(min-width:860px) {
+      .grid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+      margin-top: 24px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+  <div style="display:flex;justify-content:space-between;align-items:center;">
+    <div>
+      <h1>Power BI Portfolio – Karthika S</h1>
+      <div class="subtitle">Power BI Developer | Proton Tester | Cognizant (3+ years)</div>
+      <div class="contact">Chennai, India · 
+        <a href="mailto:Karthika27sri@gmail.com">Karthika27sri@gmail.com</a> · 
+        <a href="tel:+916382736360">+91‑6382736360</a>
+      </div>
+      <div class="actions">
+        <a class="btn" href="Resume/Resume.pdf" download>⬇ Download Resume (PDF)</a>
+        <a class="btn secondary" href="Resume/Resume.docx" download>⬇ Download Resume (Word)</a>
+      </div>
+      <div class="contact">
+        <span class="chip">Power BI</span>
+        <span class="chip">DAX</span>
+        <span class="chip">Report Builder</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Data Modeling</span>
+        <span class="chip">Proton Testing</span>
+        <span class="chip">Documentation</span>
+      </div>
+    </div>
+
+    <!-- Photo on top right -->
+    <div>
+      <img src="Photo/photo.jpg" alt="Karthika S" 
+           style="width:150px;height:150px;border-radius:50%;border:3px solid #38bdf8;object-fit:cover;">
+    </div>
+  </div>
+</header>
+
+    <section>
+      <h2>Highlights</h2>
+      <ul>
+        <li>Delivered <strong>40+ Power BI reports</strong> across enterprise projects; executed <strong>150+ test cases</strong> with <strong>zero escalations</strong>.</li>
+        <li>Won multiple <strong>Cognizant Cheers Awards</strong>: Doing the Right Thing, Raising the Bar, Asset of the Organization.</li>
+        <li>End‑to‑end experience in <strong>BI migrations</strong>: Cognos → Power BI, Qlik Sense → Power BI, SAP BO → Power BI.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="grid">
+        <div>
+          <h3>1) Cognos → Power BI Migration (Novartis)</h3>
+          <ul>
+            <li>Built <strong>12+ reports</strong> using Power BI Desktop & Report Builder.</li>
+            <li>Executed <strong>60+ Proton test cases</strong>; produced FS, DS, CS, TRM docs.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>2) Qlik Sense → Power BI (GDPD)</h3>
+          <ul>
+            <li>Designed an <strong>optimized 2‑page report</strong> with conditional formatting.</li>
+            <li>Validated parity between Qlik and Power BI outputs.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>3) AppZen – End‑to‑End Development</h3>
+          <ul>
+            <li>Developed from scratch: Drill‑down, Drill‑through, Matrix, Calendar, DAX Time Intelligence.</li>
+            <li>Focused on business‑driven navigation and reusable measures.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>4) SAP BO → Power BI (RMDatalake & Peach)</h3>
+          <ul>
+            <li>Migrated dashboards; delivered <strong>8+ reports</strong>, user demos, and <strong>60+ test cases</strong>.</li>
+            <li>Improved layout consistency and performance.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>5) GCOT – Advanced Visualizations</h3>
+          <ul>
+            <li>Expanded a 10‑line Excel into analytical dashboards.</li>
+            <li>Used Heatmap, Sankey, Radar, and Gantt visuals.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>6) Gloria – Multi‑Source Automation</h3>
+          <ul>
+            <li>Unioned multiple Excels with DAX over shared keys.</li>
+            <li>Added column‑reorder parameter and in‑table search; <strong>30+ test cases</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.E – Computer Science and Engineering</strong> (CGPA: 8.6), PSNA College of Engineering and Technology, 2022</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Achievements</h2>
+      <ul>
+        <li>Zero escalations across all projects.</li>
+        <li>Cognizant Cheers Awards: Doing the Right Thing, Raising the Bar, Asset of the Organization.</li>
+        <li>Certifications: AZ‑900, PL‑300, PL‑200.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:Karthika27sri@gmail.com">Karthika27sri@gmail.com</a></li>
+        <li>Phone: <a href="tel:+916382736360">+91‑6382736360</a></li>
+        <li>Location: Chennai, India</li>
+      </ul>
+    </section>
+
+   
