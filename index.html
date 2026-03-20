@@ -1,263 +1,311 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Karthika S – Power BI Portfolio</title>
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --chip: #1f2937;
-      --btn: #22c55e;
-      --btn2: #38bdf8
-    }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap');
 
-    * {
-      box-sizing: border-box
-    }
+.p4*{box-sizing:border-box;margin:0;padding:0;}
+.p4{
+  font-family:'Inter',sans-serif;
+  background:#0F0F0F;
+  color:#EDEDED;
+  max-width:900px;
+  margin:0 auto;
+}
 
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6
-    }
+/* HERO */
+.p4-hero{padding:56px 48px 52px;border-bottom:1px solid #222;}
+.p4-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#161616;border:1px solid #2A2A2A;
+  border-radius:100px;padding:7px 18px;
+  font-family:'DM Mono',monospace;font-size:11px;
+  color:#00D4B4;letter-spacing:1.5px;margin-bottom:28px;
+}
+.p4-dot{width:7px;height:7px;border-radius:50%;background:#00D4B4;animation:p4bl 2s infinite;}
+@keyframes p4bl{0%,100%{opacity:1}50%{opacity:0.2}}
+.p4-name{
+  font-family:'Syne',sans-serif;
+  font-size:72px;font-weight:800;
+  line-height:0.95;letter-spacing:-2px;
+  color:#EDEDED;margin-bottom:14px;
+}
+.p4-name em{color:#00D4B4;font-style:normal;}
+.p4-role{font-size:16px;font-weight:400;color:#555;letter-spacing:0.5px;margin-bottom:24px;}
+.p4-desc{
+  font-size:15px;font-weight:300;color:#888;line-height:1.8;
+  max-width:540px;margin-bottom:36px;
+  border-left:2px solid #00D4B4;padding-left:18px;
+}
+.p4-chips{display:flex;flex-wrap:wrap;gap:10px;}
+.p4-chip{
+  display:flex;align-items:center;gap:8px;
+  background:#161616;border:1px solid #2A2A2A;
+  border-radius:8px;padding:10px 16px;
+  font-size:13px;color:#888;
+}
 
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 32px
-    }
+/* STATS */
+.p4-stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #222;}
+.p4-stat{padding:28px 24px;border-right:1px solid #222;text-align:center;}
+.p4-stat:last-child{border-right:none;}
+.p4-snum{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;color:#EDEDED;line-height:1;}
+.p4-snum span{color:#00D4B4;font-size:24px;}
+.p4-slbl{font-family:'DM Mono',monospace;font-size:10px;color:#444;letter-spacing:1.5px;text-transform:uppercase;margin-top:8px;}
 
-    header {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 24px
-    }
+/* SECTIONS */
+.p4-sec{padding:52px 48px;border-bottom:1px solid #222;}
+.p4-sec:last-child{border-bottom:none;}
+.p4-sh{display:flex;align-items:center;gap:14px;margin-bottom:36px;}
+.p4-sn{font-family:'DM Mono',monospace;font-size:12px;color:#00D4B4;}
+.p4-stitle{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#EDEDED;letter-spacing:-0.5px;}
+.p4-sline{flex:1;height:1px;background:#222;}
 
-    h1 {
-      font-size: 32px;
-      margin: 0;
-      letter-spacing: .3px
-    }
+/* SKILLS */
+.p4-sg{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.p4-sc{background:#161616;padding:24px 26px;}
+.p4-sc:nth-child(1){border-radius:12px 0 0 0;}
+.p4-sc:nth-child(2){border-radius:0 12px 0 0;}
+.p4-sc:nth-child(3){border-radius:0 0 0 12px;}
+.p4-sc:nth-child(4){border-radius:0 0 12px 0;}
+.p4-sc-name{font-size:14px;font-weight:600;color:#EDEDED;margin-bottom:14px;}
+.p4-pills{display:flex;flex-wrap:wrap;gap:7px;}
+.p4-pill{font-family:'DM Mono',monospace;font-size:11px;padding:5px 13px;border-radius:100px;border:1px solid #2A2A2A;color:#666;background:#0F0F0F;}
+.p4-pill.hi{border-color:#00D4B430;color:#00D4B4;background:#00D4B408;}
 
-    .subtitle {
-      color: var(--muted)
-    }
+/* EXPERIENCE */
+.p4-exp{margin-bottom:28px;}
+.p4-exp:last-child{margin-bottom:0;}
+.p4-ebar{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  flex-wrap:wrap;gap:10px;
+  background:#161616;border:1px solid #222;
+  border-radius:12px 12px 0 0;padding:22px 26px;
+}
+.p4-erole{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#EDEDED;}
+.p4-eco{font-size:12px;color:#444;font-family:'DM Mono',monospace;margin-top:5px;}
+.p4-edate{font-family:'DM Mono',monospace;font-size:11px;color:#00D4B4;border:1px solid #00D4B430;padding:5px 14px;border-radius:100px;white-space:nowrap;margin-top:4px;}
+.p4-elist{list-style:none;background:#161616;border:1px solid #222;border-top:none;border-radius:0 0 12px 12px;overflow:hidden;}
+.p4-elist li{font-size:14px;font-weight:400;color:#888;line-height:1.75;padding:13px 26px;border-bottom:1px solid #1E1E1E;display:flex;align-items:flex-start;gap:12px;}
+.p4-elist li:last-child{border-bottom:none;}
+.p4-elist li::before{content:'→';color:#00D4B4;font-size:13px;margin-top:2px;flex-shrink:0;}
 
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      color: var(--text);
-      font-size: 14px
-    }
+/* PROJECTS */
+.p4-pg{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.p4-pc{background:#161616;border:1px solid #222;border-radius:12px;padding:26px;}
+.p4-pcat{font-family:'DM Mono',monospace;font-size:10px;color:#444;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
+.p4-pname{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#EDEDED;margin-bottom:10px;line-height:1.2;}
+.p4-pdesc{font-size:13px;font-weight:400;color:#666;line-height:1.7;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid #222;}
+.p4-pnums{display:flex;gap:24px;}
+.p4-pn{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#00D4B4;line-height:1;}
+.p4-pk{font-family:'DM Mono',monospace;font-size:10px;color:#444;letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
 
-    .chip {
-      background: var(--chip);
-      color: var(--text);
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 12px
-    }
+/* AWARDS */
+.p4-ag{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.p4-aw{background:#161616;border:1px solid #222;border-radius:12px;padding:22px;}
+.p4-awt{font-family:'DM Mono',monospace;font-size:10px;color:#444;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;}
+.p4-awi{font-size:22px;margin-bottom:10px;}
+.p4-awn{font-size:14px;font-weight:600;color:#EDEDED;line-height:1.3;}
 
-    .actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 6px
-    }
+/* EDU */
+.p4-edu{
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:16px;
+  background:#161616;border:1px solid #222;border-radius:12px;padding:30px 32px;
+}
+.p4-edeg{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#EDEDED;margin-bottom:8px;}
+.p4-esc{font-family:'DM Mono',monospace;font-size:12px;color:#444;}
+.p4-cgpa{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;color:#00D4B4;line-height:1;text-align:right;}
+.p4-cgpal{font-family:'DM Mono',monospace;font-size:10px;color:#444;letter-spacing:1.5px;text-align:right;text-transform:uppercase;margin-top:4px;}
 
-    .btn {
-      display: inline-block;
-      background: var(--btn);
-      color: #052e16;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-weight: 700;
-      text-decoration: none;
-      border: 1px solid #16a34a
-    }
+/* FOOTER */
+.p4-foot{padding:24px 48px;border-top:1px solid #222;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.p4-foot span{font-family:'DM Mono',monospace;font-size:11px;color:#333;letter-spacing:1px;}
+</style>
 
-    .btn.secondary {
-      background: var(--btn2);
-      color: #06233a;
-      border-color: #0ea5e9
-    }
+<div class="p4">
 
-    section {
-      background: var(--card);
-      border: 1px solid #1f2937;
-      border-radius: 14px;
-      padding: 18px 18px;
-      margin: 14px 0
-    }
-
-    h2 {
-      font-size: 18px;
-      margin: 0 0 10px 0;
-      color: #cbd5e1
-    }
-
-    h3 {
-      font-size: 16px;
-      margin: 10px 0 6px 0;
-      color: #e2e8f0
-    }
-
-    ul {
-      padding-left: 18px;
-      margin: 6px 0
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px
-    }
-
-    @media(min-width:860px) {
-      .grid {
-        grid-template-columns: 1fr 1fr
-      }
-    }
-
-    footer {
-      color: var(--muted);
-      font-size: 12px;
-      text-align: center;
-      margin-top: 24px
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <header>
-  <div style="display:flex;justify-content:space-between;align-items:center;">
-    <div>
-      <h1>Power BI Portfolio – Karthika S</h1>
-      <div class="subtitle">Power BI Developer | Proton Tester | Cognizant (3+ years)</div>
-      <div class="contact">Chennai, India · 
-        <a href="mailto:Karthika27sri@gmail.com">Karthika27sri@gmail.com</a> · 
-        <a href="tel:+916382736360">+91‑6382736360</a>
-      </div>
-      <div class="actions">
-        <a class="btn" href="Resume/Resume.pdf" download>⬇ Download Resume (PDF)</a>
-        <a class="btn secondary" href="Resume/Resume.docx" download>⬇ Download Resume (Word)</a>
-      </div>
-      <div class="contact">
-        <span class="chip">Power BI</span>
-        <span class="chip">DAX</span>
-        <span class="chip">Report Builder</span>
-        <span class="chip">SQL</span>
-        <span class="chip">Data Modeling</span>
-        <span class="chip">Proton Testing</span>
-        <span class="chip">Documentation</span>
-      </div>
-    </div>
-
-    <!-- Photo on top right -->
-    <div>
-      <img src="Photo/photo.jpg" alt="Karthika S" 
-           style="width:150px;height:150px;border-radius:50%;border:3px solid #38bdf8;object-fit:cover;">
+  <div class="p4-hero">
+    <div class="p4-badge"><div class="p4-dot"></div>OPEN TO OPPORTUNITIES</div>
+    <div class="p4-name">KARTHIKA <em>S.</em></div>
+    <div class="p4-role">Business Intelligence Analyst &nbsp;·&nbsp; Cognizant &nbsp;·&nbsp; Chennai</div>
+    <div class="p4-desc">3+ years delivering 40+ enterprise Power BI solutions across Cognos, Qlik &amp; SAP migrations — with zero escalations and 3 national recognition awards.</div>
+    <div class="p4-chips">
+      <div class="p4-chip">✉&nbsp; Karthika27sri@gmail.com</div>
+      <div class="p4-chip">📞&nbsp; +91-6382736360</div>
+      <div class="p4-chip">📍&nbsp; Chennai, India</div>
     </div>
   </div>
-</header>
 
-    <section>
-      <h2>Highlights</h2>
-      <ul>
-        <li>Delivered <strong>40+ Power BI reports</strong> across enterprise projects; executed <strong>150+ test cases</strong> with <strong>zero escalations</strong>.</li>
-        <li>Won multiple <strong>Cognizant Cheers Awards</strong>: Doing the Right Thing, Raising the Bar, Asset of the Organization.</li>
-        <li>End‑to‑end experience in <strong>BI migrations</strong>: Cognos → Power BI, Qlik Sense → Power BI, SAP BO → Power BI.</li>
-      </ul>
-    </section>
+  <div class="p4-stats">
+    <div class="p4-stat"><div class="p4-snum">40<span>+</span></div><div class="p4-slbl">Reports Delivered</div></div>
+    <div class="p4-stat"><div class="p4-snum">150<span>+</span></div><div class="p4-slbl">Test Cases</div></div>
+    <div class="p4-stat"><div class="p4-snum">3<span>+</span></div><div class="p4-slbl">Yrs Experience</div></div>
+    <div class="p4-stat"><div class="p4-snum">0</div><div class="p4-slbl">Escalations</div></div>
+  </div>
 
-    <section>
-      <h2>Projects</h2>
-      <div class="grid">
-        <div>
-          <h3>1) Cognos → Power BI Migration (Novartis)</h3>
-          <ul>
-            <li>Built <strong>12+ reports</strong> using Power BI Desktop & Report Builder.</li>
-            <li>Executed <strong>60+ Proton test cases</strong>; produced FS, DS, CS, TRM docs.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>2) Qlik Sense → Power BI (GDPD)</h3>
-          <ul>
-            <li>Designed an <strong>optimized 2‑page report</strong> with conditional formatting.</li>
-            <li>Validated parity between Qlik and Power BI outputs.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>3) AppZen – End‑to‑End Development</h3>
-          <ul>
-            <li>Developed from scratch: Drill‑down, Drill‑through, Matrix, Calendar.</li>
-            <li>Focused on business‑driven navigation and reusable measures.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>4) SAP BO → Power BI (RMDatalake & Peach)</h3>
-          <ul>
-            <li>Migrated dashboards; delivered <strong>8+ reports</strong>, user demos, and <strong>60+ test cases</strong>.</li>
-            <li>Improved layout consistency and performance.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>5) GCOT – Advanced Visualizations</h3>
-          <ul>
-            <li>Expanded a 10‑line Excel into analytical dashboards.</li>
-            <li>Used Heatmap, Sankey, Radar, and Gantt visuals.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>6) Gloria – Multi‑Source Automation</h3>
-          <ul>
-            <li>Unioned multiple Excels with DAX over shared keys.</li>
-            <li>Added column‑reorder parameter and in‑table search; <strong>30+ test cases</strong>.</li>
-          </ul>
+  <div class="p4-sec">
+    <div class="p4-sh"><span class="p4-sn">01</span><span class="p4-stitle">Skills</span><div class="p4-sline"></div></div>
+    <div class="p4-sg">
+      <div class="p4-sc">
+        <div class="p4-sc-name">BI Platforms</div>
+        <div class="p4-pills">
+          <span class="p4-pill hi">Power BI Desktop</span>
+          <span class="p4-pill hi">Report Builder</span>
+          <span class="p4-pill">Qlik Sense</span>
+          <span class="p4-pill">SAP BO</span>
+          <span class="p4-pill">IBM Cognos</span>
         </div>
       </div>
-    </section>
+      <div class="p4-sc">
+        <div class="p4-sc-name">Data & Modelling</div>
+        <div class="p4-pills">
+          <span class="p4-pill hi">DAX</span>
+          <span class="p4-pill hi">SQL</span>
+          <span class="p4-pill">Data Modelling</span>
+          <span class="p4-pill">Power Query</span>
+          <span class="p4-pill">Star Schema</span>
+        </div>
+      </div>
+      <div class="p4-sc">
+        <div class="p4-sc-name">Advanced Visuals</div>
+        <div class="p4-pills">
+          <span class="p4-pill hi">Heatmap</span>
+          <span class="p4-pill hi">Sankey</span>
+          <span class="p4-pill">Radar</span>
+          <span class="p4-pill">Gantt</span>
+          <span class="p4-pill">Drill-through</span>
+          <span class="p4-pill">Matrix</span>
+        </div>
+      </div>
+      <div class="p4-sc">
+        <div class="p4-sc-name">Certifications</div>
+        <div class="p4-pills">
+          <span class="p4-pill hi">PL-300</span>
+          <span class="p4-pill hi">AZ-900</span>
+          <span class="p4-pill">PL-200</span>
+          <span class="p4-pill">Microsoft Azure</span>
+          <span class="p4-pill">Proton Testing</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li><strong>B.E – Computer Science and Engineering</strong> (CGPA: 8.6), PSNA College of Engineering and Technology, 2022</li>
+  <div class="p4-sec">
+    <div class="p4-sh"><span class="p4-sn">02</span><span class="p4-stitle">Experience</span><div class="p4-sline"></div></div>
+    <div class="p4-exp">
+      <div class="p4-ebar">
+        <div>
+          <div class="p4-erole">Business Intelligence Analyst</div>
+          <div class="p4-eco">Cognizant Technology Solutions · Chennai</div>
+        </div>
+        <div class="p4-edate">Dec 2022 – Present</div>
+      </div>
+      <ul class="p4-elist">
+        <li>Developed and delivered 40+ Power BI reports across enterprise migration projects with zero escalations.</li>
+        <li>Executed 150+ Proton test cases — installation, functional, and performance — ensuring 100% quality compliance.</li>
+        <li>Led end-to-end migrations from Cognos, Qlik Sense, and SAP BO to Power BI — requirements, dev, testing, user demos.</li>
+        <li>Authored complete project documentation: Functional Spec, Design Spec, FRA, TSP, TRM, and TSR.</li>
+        <li>Recognized with 3 Cognizant Cheers Awards for delivery excellence and collaboration.</li>
       </ul>
-    </section>
-
-    <section>
-      <h2>Achievements</h2>
-      <ul>
-        <li>Zero escalations across all projects.</li>
-        <li>Cognizant Cheers Awards: Doing the Right Thing, Raising the Bar, Asset of the Organization.</li>
-        <li>Certifications: AZ‑900, PL‑300, PL‑200.</li>
+    </div>
+    <div class="p4-exp">
+      <div class="p4-ebar">
+        <div>
+          <div class="p4-erole">Informatica Intern</div>
+          <div class="p4-eco">Cognizant Technology Solutions · Chennai</div>
+        </div>
+        <div class="p4-edate">Mar – Aug 2022</div>
+      </div>
+      <ul class="p4-elist">
+        <li>Hands-on experience with Informatica data integration tools — led directly to a full-time offer.</li>
       </ul>
-    </section>
+    </div>
+  </div>
 
-    <section>
-      <h2>Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:Karthika27sri@gmail.com">Karthika27sri@gmail.com</a></li>
-        <li>Phone: <a href="tel:+916382736360">+91‑6382736360</a></li>
-        <li>Location: Chennai, India</li>
-      </ul>
-    </section>
+  <div class="p4-sec">
+    <div class="p4-sh"><span class="p4-sn">03</span><span class="p4-stitle">Projects</span><div class="p4-sline"></div></div>
+    <div class="p4-pg">
+      <div class="p4-pc">
+        <div class="p4-pcat">Migration · Novartis</div>
+        <div class="p4-pname">Cognos → Power BI</div>
+        <div class="p4-pdesc">Migrated IBM Cognos reports to Power BI maintaining full business logic parity with improved performance.</div>
+        <div class="p4-pnums">
+          <div><div class="p4-pn">12+</div><div class="p4-pk">Reports</div></div>
+          <div><div class="p4-pn">60+</div><div class="p4-pk">Test Cases</div></div>
+        </div>
+      </div>
+      <div class="p4-pc">
+        <div class="p4-pcat">Migration · GDPD</div>
+        <div class="p4-pname">Qlik Sense → Power BI</div>
+        <div class="p4-pdesc">2-page optimised Power BI report with conditional formatting, replacing Qlik dashboards.</div>
+        <div class="p4-pnums">
+          <div><div class="p4-pn">100%</div><div class="p4-pk">Parity Validated</div></div>
+        </div>
+      </div>
+      <div class="p4-pc">
+        <div class="p4-pcat">End-to-End Build</div>
+        <div class="p4-pname">AppZen</div>
+        <div class="p4-pdesc">Built from scratch — drill-down, drill-through, matrix tables and complex DAX for finance reporting.</div>
+        <div class="p4-pnums">
+          <div><div class="p4-pn">0</div><div class="p4-pk">Escalations</div></div>
+        </div>
+      </div>
+      <div class="p4-pc">
+        <div class="p4-pcat">Migration · RMDatalake</div>
+        <div class="p4-pname">SAP BO → Power BI</div>
+        <div class="p4-pdesc">Migrated SAP BO dashboards with live user demos and full test case validation for sign-off.</div>
+        <div class="p4-pnums">
+          <div><div class="p4-pn">8+</div><div class="p4-pk">Reports</div></div>
+          <div><div class="p4-pn">60+</div><div class="p4-pk">Test Cases</div></div>
+        </div>
+      </div>
+      <div class="p4-pc">
+        <div class="p4-pcat">Advanced Visuals</div>
+        <div class="p4-pname">GCOT</div>
+        <div class="p4-pdesc">Heatmap, Sankey, Radar and Gantt charts for operational analytics and decision support.</div>
+        <div class="p4-pnums">
+          <div><div class="p4-pn">4</div><div class="p4-pk">Custom Visuals</div></div>
+        </div>
+      </div>
+      <div class="p4-pc">
+        <div class="p4-pcat">Automation</div>
+        <div class="p4-pname">Gloria</div>
+        <div class="p4-pdesc">Multi-source Excel union via DAX, column-reorder parameter, in-table search and full documentation.</div>
+        <div class="p4-pnums">
+          <div><div class="p4-pn">30+</div><div class="p4-pk">Test Cases</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-   
+  <div class="p4-sec">
+    <div class="p4-sh"><span class="p4-sn">04</span><span class="p4-stitle">Awards & Certifications</span><div class="p4-sline"></div></div>
+    <div class="p4-ag">
+      <div class="p4-aw"><div class="p4-awt">Cognizant Award</div><div class="p4-awi">🏆</div><div class="p4-awn">Doing the Right Thing</div></div>
+      <div class="p4-aw"><div class="p4-awt">Cognizant Award</div><div class="p4-awi">🚀</div><div class="p4-awn">Raising the Bar</div></div>
+      <div class="p4-aw"><div class="p4-awt">Cognizant Award</div><div class="p4-awi">⭐</div><div class="p4-awn">Asset of the Organization</div></div>
+      <div class="p4-aw"><div class="p4-awt">Microsoft Certified</div><div class="p4-awi">📊</div><div class="p4-awn">PL-300 — Power BI Data Analyst Associate</div></div>
+      <div class="p4-aw"><div class="p4-awt">Microsoft Certified</div><div class="p4-awi">☁️</div><div class="p4-awn">AZ-900 — Azure Fundamentals</div></div>
+      <div class="p4-aw"><div class="p4-awt">Microsoft Certified</div><div class="p4-awi">⚡</div><div class="p4-awn">PL-200 — Power Platform</div></div>
+    </div>
+  </div>
 
+  <div class="p4-sec">
+    <div class="p4-sh"><span class="p4-sn">05</span><span class="p4-stitle">Education</span><div class="p4-sline"></div></div>
+    <div class="p4-edu">
+      <div>
+        <div class="p4-edeg">B.E. — Computer Science & Engineering</div>
+        <div class="p4-esc">PSNA College of Engineering and Technology · Graduated 2022</div>
+      </div>
+      <div>
+        <div class="p4-cgpa">8.6</div>
+        <div class="p4-cgpal">CGPA / 10</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p4-foot">
+    <span>KARTHIKA S · BUSINESS INTELLIGENCE ANALYST</span>
+    <span>CHENNAI · KARTHIKA27SRI@GMAIL.COM</span>
+  </div>
+
+</div>
