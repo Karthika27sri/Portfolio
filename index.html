@@ -33,9 +33,9 @@
 
     .p4-name { font-size:72px; font-weight:800; line-height:0.95; letter-spacing:-2px; color:#EDEDED; margin-bottom:14px; }
     .p4-name em { color:#00D4B4; font-style:normal; }
-    .p4-role { font-size:16px; font-weight:400; color:#555; letter-spacing:0.5px; margin-bottom:24px; }
+    .p4-role { font-size:16px; font-weight:400; color:#00D4B4; letter-spacing:0.5px; margin-bottom:24px; }
     .p4-desc {
-      font-size:15px; font-weight:300; color:#888; line-height:1.8;
+      font-size:15px; font-weight:300; color:#EAFBF2; line-height:1.8;
       max-width:540px; margin-bottom:36px;
       border-left:2px solid #00D4B4; padding-left:18px;
     }
@@ -44,7 +44,7 @@
       display:flex; align-items:center; gap:8px;
       background:#161616; border:1px solid #2A2A2A;
       border-radius:8px; padding:10px 16px;
-      font-size:13px; color:#888;
+      font-size:13px; color:#58B012;
     }
 
     /* STATS */
@@ -53,7 +53,7 @@
     .p4-stat:last-child { border-right:none; }
     .p4-snum { font-size:42px; font-weight:800; color:#EDEDED; line-height:1; }
     .p4-snum span { color:#00D4B4; font-size:24px; }
-    .p4-slbl { font-size:10px; color:#444; letter-spacing:1.5px; text-transform:uppercase; margin-top:8px; }
+    .p4-slbl { font-size:10px; color:#8ADA34; letter-spacing:1.5px; text-transform:uppercase; margin-top:8px; }
 
     /* SECTIONS */
     .p4-sec { padding:52px 48px; border-bottom:1px solid #222; }
@@ -68,7 +68,7 @@
     .p4-sc { background:#161616; padding:24px 26px; }
     .p4-sc-name { font-size:14px; font-weight:600; color:#EDEDED; margin-bottom:14px; }
     .p4-pills { display:flex; flex-wrap:wrap; gap:7px; }
-    .p4-pill { font-family:'Fira Code', monospace; font-size:11px; padding:5px 13px; border-radius:100px; border:1px solid #2A2A2A; color:#666; background:#0F0F0F; }
+    .p4-pill { font-family:'Fira Code', monospace; font-size:11px; padding:5px 13px; border-radius:100px; border:1px solid #2A2A2A; color:#8ADA34; background:#0F0F0F; }
     .p4-pill.hi { border-color:#00D4B430; color:#00D4B4; background:#00D4B408; }
 
     /* EXPERIENCE */
@@ -78,27 +78,27 @@
       flex-wrap:wrap; gap:10px; background:#161616; border:1px solid #222;
       border-radius:12px 12px 0 0; padding:22px 26px;
     }
-    .p4-erole { font-size:20px; font-weight:800; color:#EDEDED; }
-    .p4-eco { font-size:12px; color:#444; margin-top:5px; }
+    .p4-erole { font-size:20px; font-weight:800; color:#00bfa0; }
+    .p4-eco { font-size:12px; color:#A8A8A8; margin-top:5px; }
     .p4-edate { font-size:11px; color:#00D4B4; border:1px solid #00D4B430; padding:5px 14px; border-radius:100px; white-space:nowrap; margin-top:4px; }
     .p4-elist { list-style:none; background:#161616; border:1px solid #222; border-top:none; border-radius:0 0 12px 12px; overflow:hidden; }
-    .p4-elist li { font-size:14px; font-weight:400; color:#888; line-height:1.75; padding:13px 26px; border-bottom:1px solid #1E1E1E; display:flex; align-items:flex-start; gap:12px; }
+    .p4-elist li { font-size:14px; font-weight:400; color:#EAFBF2; line-height:1.75; padding:13px 26px; border-bottom:1px solid #1E1E1E; display:flex; align-items:flex-start; gap:12px; }
     .p4-elist li:last-child { border-bottom:none; }
     .p4-elist li::before { content:'→'; color:#00D4B4; font-size:13px; margin-top:2px; flex-shrink:0; }
 
     /* PROJECTS */
     .p4-pg { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
     .p4-pc { background:#161616; border:1px solid #222; border-radius:12px; padding:26px; }
-    .p4-pcat { font-size:10px; color:#444; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
+    .p4-pcat { font-size:10px; color:#8ADA34; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
     .p4-pname { font-size:18px; font-weight:800; color:#EDEDED; margin-bottom:10px; line-height:1.2; }
-    .p4-pdesc { font-size:13px; font-weight:400; color:#666; line-height:1.7; margin-bottom:18px; padding-bottom:18px; border-bottom:1px solid #222; }
+    .p4-pdesc { font-size:13px; font-weight:400; color:#EAFBF2; line-height:1.7; margin-bottom:18px; padding-bottom:18px; border-bottom:1px solid #222; }
     .p4-pnums { display:flex; gap:24px; }
     .p4-pn { font-size:28px; font-weight:800; color:#00D4B4; line-height:1; }
-    .p4-pk { font-size:10px; color:#444; letter-spacing:1px; text-transform:uppercase; margin-top:4px; }
+    .p4-pk { font-size:10px; color:#8ADA34; letter-spacing:1px; text-transform:uppercase; margin-top:4px; }
 /* AWARDS */
 .p4-ag{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
 .p4-aw{background:#161616;border:1px solid #222;border-radius:12px;padding:22px;}
-.p4-awt{font-family:'DM Mono',monospace;font-size:10px;color:#444;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;}
+.p4-awt{font-family:'DM Mono',monospace;font-size:10px;color:#8ADA34;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;}
 .p4-awi{font-size:22px;margin-bottom:10px;}
 .p4-awn{font-size:14px;font-weight:600;color:#EDEDED;line-height:1.3;}
 
@@ -109,13 +109,13 @@
   background:#161616;border:1px solid #222;border-radius:12px;padding:30px 32px;
 }
 .p4-edeg{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#EDEDED;margin-bottom:8px;}
-.p4-esc{font-family:'DM Mono',monospace;font-size:12px;color:#444;}
+.p4-esc{font-family:'DM Mono',monospace;font-size:12px;color:#8ADA34;}
 .p4-cgpa{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;color:#00D4B4;line-height:1;text-align:right;}
-.p4-cgpal{font-family:'DM Mono',monospace;font-size:10px;color:#444;letter-spacing:1.5px;text-align:right;text-transform:uppercase;margin-top:4px;}
+.p4-cgpal{font-family:'DM Mono',monospace;font-size:10px;color:#8ADA34;letter-spacing:1.5px;text-align:right;text-transform:uppercase;margin-top:4px;}
 
 /* FOOTER */
 .p4-foot{padding:24px 48px;border-top:1px solid #222;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
-.p4-foot span{font-family:'DM Mono',monospace;font-size:11px;color:#333;letter-spacing:1px;}
+.p4-foot span{font-family:'DM Mono',monospace;font-size:11px;color:#8ADA34;letter-spacing:1px;}
 </style>
 
 <div class="p4">
